@@ -1,47 +1,65 @@
+const playerText = document.querySelector("#playerText");
+const computerText = document.querySelector("#computerText");
+const resultText = document.querySelector("#resultText");
+const choiceBtns = document.querySelectorAll(".choiceBtn");
+let player;
+let computer;
 
-let playerSelection = prompt('Select rock, paper or scissors');
+choiceBtns.forEach(button => button.addEventListener("click", () => {
 
-const myArray = ["rock", "paper", "scissors"];
+    player = button.textContent;
+    computerSelection();
+    playerText.textContent = `Player: ${player}`;
+    computerText.textContent = `Computer: ${computer}`;
+    resultText.textContent = result();
+}));
 
-function random(myArray){
-    return myArray [Math.floor(Math.random()*myArray.length)];
-}
+function computerSelection(){
 
-console.log("The computer chose " + random(myArray));
+    const randNum = Math.floor(Math.random() * 3) + 1;
 
-
-
-
-
-
-
-
-function round(playerSelection, computerSelection) {
-    if (playerSelection == "rock") {
-     if (computerSelection == "scissors") {
-        console.log("You lose! Paper beats rock")
-        }
-
+    switch(randNum){
+      case 1:
+        computer = "rock";
+        break;
+      case 2:
+        computer = "paper";
+        break;
+      case 3:
+        computer = "scissors";
+        break;
     }
-   
-    else if (
-            (playerSelection == "paper" && computerSelection == "rock") ||
-            (playerSelection == "scissors" && computerSelection == "paper") ||
-            (playerSelection == "rock" && computerSelection == "scissor") )
-            {
-                
-        return console.log("You win! Paper beats rock")
-        
-        }
-
-    else if (
-            (playerSelection == "scissor" && computerSelection == "rock") ||
-            (playerSelection == "scissor" && computerSelection == "paper") ||
-            (playerSelection == "rock" && computerSelection == "paper") 
-    )
-    {
-        console.log("You lose :(")
-        }
+}
+function result(){
+    if(player == computer){
+      return "Draw!";
+    }
+    else if ((player === "paper" && computer === "rock") ||
+            (player === "scissors" && computer === "paper") ||
+            (player === "rock" && computer === "scissors") ) {  
+        return ("You win! ");
+    }
+    else {
+        return ("You lose :(");   
+}
 }
 
-round();
+
+
+/*
+if (player === computer) {
+    return ("It's a draw!");
+}
+
+else if (
+    (player === "paper" && computer === "rock") ||
+    (player === "scissors" && computer === "paper") ||
+    (player === "rock" && computer === "scissors") ) {
+         
+   // playerScore += 1;//
+        return ("You win! " + player + " beats " + computer);
+        }
+
+ else {
+    return ("You lose :(");
+            } */
