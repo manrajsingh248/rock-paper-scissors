@@ -44,22 +44,3 @@ function result(){
 }
 }
 
-
-
-/*
-if (player === computer) {
-    return ("It's a draw!");
-}
-
-else if (
-    (player === "paper" && computer === "rock") ||
-    (player === "scissors" && computer === "paper") ||
-    (player === "rock" && computer === "scissors") ) {
-         
-   // playerScore += 1;//
-        return ("You win! " + player + " beats " + computer);
-        }
-
- else {
-    return ("You lose :(");
-            } */
