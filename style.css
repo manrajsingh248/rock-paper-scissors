@@ -1,0 +1,30 @@
+body {
+    background-color:  gray;
+}
+
+.header {
+    background-color: aqua;
+    color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+button {
+    background-color: white;
+    
+}
+
+.gameText{
+    display: flex; 
+    flex-wrap: wrap;
+    color:  black;
+    flex-direction: row;
+
+}
+
+
+
+
+
