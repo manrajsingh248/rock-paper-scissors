@@ -3,12 +3,12 @@ body {
 }
 
 .header {
-    background-color: aqua;
-    color: black; 
+    background-color: black;
+    color: white; 
     display: flex;
     justify-content: center;
     align-items: center;
-  
+    height: 80px;
 }
 
 button {
