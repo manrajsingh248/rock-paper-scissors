@@ -9,13 +9,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 80px;
+    font-size: 25px;
 }
 
 button {
     background-color: white;
-    
 }
 
+button:hover{
+    background-color: green;
+}
 .gameText{
     display: flex; 
     flex-wrap: wrap;
